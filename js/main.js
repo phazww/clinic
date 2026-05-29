@@ -793,4 +793,17 @@ document.addEventListener('DOMContentLoaded', () => {
   window.handleModalSubmit = handleModalSubmit;
   window.zoomLicense = zoomLicense;
   window.applyPhoneMask = applyPhoneMask;
+
+  // ── COOKIE CONSENT BANNER ──────────────────────────
+  const cookieBanner = document.getElementById('cookieBanner');
+  const cookieAccept = document.getElementById('cookieAccept');
+  if (cookieBanner && cookieAccept) {
+    if (localStorage.getItem('cookieConsent')) {
+      cookieBanner.classList.add('hidden');
+    }
+    cookieAccept.addEventListener('click', () => {
+      localStorage.setItem('cookieConsent', 'true');
+      cookieBanner.classList.add('hidden');
+    });
+  }
 });
