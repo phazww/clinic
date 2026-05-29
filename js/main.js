@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // 4. Откройте в браузере: https://api.telegram.org/bot<ТОКЕН_БОТА>/getUpdates
   // 5. Найдите в ответе "chat":{"id":-1001234567890} и скопируйте этот ID в telegramChatId.
   const CONFIG = {
-    telegramBotToken: 'YOUR_BOT_TOKEN', // Токен бота от @BotFather
-    telegramChatId: 'YOUR_CHAT_ID',     // ID чата (начинается с минуса для групп)
+    telegramBotToken: '8904124107:AAGJ6jjMbNkXptYdDKWfOP1i0Ii33M8ltBU', // Токен бота от @BotFather
+    telegramChatId: '-1003261807424',     // ID чата (начинается с минуса для групп)
     phone: '+79154648724',
     telegramLink: 'https://t.me/MedHe1p24',
   };
