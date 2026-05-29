@@ -794,6 +794,44 @@ document.addEventListener('DOMContentLoaded', () => {
   window.zoomLicense = zoomLicense;
   window.applyPhoneMask = applyPhoneMask;
 
+  // ── PRIVACY POLICY MODAL ──────────────────────────
+  function openPrivacyPolicy() {
+    const modalOverlay = document.getElementById('modalOverlay');
+    const modalCard = document.getElementById('modalCard');
+    const modalContent = document.getElementById('modalContent');
+    if (!modalOverlay || !modalContent) return;
+
+    modalContent.innerHTML = `
+      <h3 class="modal-title" style="margin-bottom:16px;">Политика конфиденциальности</h3>
+      <div style="max-height:60vh;overflow-y:auto;font-size:13px;line-height:1.7;color:var(--text-light);">
+        <p style="margin-bottom:12px;"><strong>1. Общие положения</strong></p>
+        <p style="margin-bottom:12px;">Настоящая Политика конфиденциальности определяет порядок обработки и защиты персональных данных пользователей сайта «Частный Наркологический Центр» в соответствии с Федеральным законом №152-ФЗ «О персональных данных».</p>
+
+        <p style="margin-bottom:12px;"><strong>2. Какие данные мы собираем</strong></p>
+        <p style="margin-bottom:12px;">При заполнении форм на сайте мы можем запрашивать: имя, номер телефона, выбранную услугу. Также автоматически собираются технические данные: IP-адрес, тип браузера, файлы cookie.</p>
+
+        <p style="margin-bottom:12px;"><strong>3. Цели обработки данных</strong></p>
+        <p style="margin-bottom:12px;">Ваши данные используются исключительно для: обратной связи и консультации, оказания медицинских услуг, улучшения качества обслуживания.</p>
+
+        <p style="margin-bottom:12px;"><strong>4. Защита данных</strong></p>
+        <p style="margin-bottom:12px;">Мы гарантируем 100% конфиденциальность. Данные не передаются третьим лицам, не публикуются и не используются в рекламных целях. Мы не ставим на учёт, не требуем документов, не делаем фото и видео.</p>
+
+        <p style="margin-bottom:12px;"><strong>5. Файлы cookie</strong></p>
+        <p style="margin-bottom:12px;">Сайт использует файлы cookie для корректной работы и аналитики. Вы можете отключить cookie в настройках браузера.</p>
+
+        <p style="margin-bottom:12px;"><strong>6. Согласие</strong></p>
+        <p style="margin-bottom:12px;">Отправляя форму или продолжая использование сайта, вы даёте согласие на обработку персональных данных в соответствии с настоящей Политикой.</p>
+
+        <p><strong>7. Контакты</strong></p>
+        <p>По вопросам обработки данных: <a href="tel:+79154648724" style="color:var(--primary);font-weight:600;">8 (915) 464-87-24</a></p>
+      </div>
+    `;
+
+    modalOverlay.classList.add('active');
+    if (modalCard) modalCard.classList.add('active');
+  }
+  window.openPrivacyPolicy = openPrivacyPolicy;
+
   // ── COOKIE CONSENT BANNER ──────────────────────────
   const cookieBanner = document.getElementById('cookieBanner');
   const cookieAccept = document.getElementById('cookieAccept');
